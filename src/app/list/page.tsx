@@ -4,6 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { loggedInProtectedPage } from '@/lib/page-protection';
 import authOptions from '@/lib/authOptions';
 import { Contact } from '@/lib/validationSchemas';
+import ContactCard from '@/components/ContactCard';
 
 /** Render a list of stuff for the logged in user. */
 const ListPage = async () => {
@@ -46,12 +47,20 @@ const ListPage = async () => {
   return (
     <main>
       <Container id="list" fluid className="py-3">
-        <Row>
-          <Col>
-            <h1>List Contacts</h1>
-            <Row xs={1} md={2} lg={3} className="g-4"> </Row>
-          </Col>
-        </Row>
+        <Container>
+          <Row>
+            <Col>
+              <h1 className="text-center"> Contacts</h1>
+              <Row xs={1} md={2} lg={3} className="g-4">
+                {contacts.map((contact) => (
+                  <Col key={contact.firstName + contact.lastName}>
+                    <ContactCard contact={contact} />
+                  </Col>
+                ))}
+              </Row>
+            </Col>
+          </Row>
+        </Container>
       </Container>
     </main>
   );
