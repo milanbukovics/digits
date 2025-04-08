@@ -17,5 +17,4 @@ const AddStuff = async () => {
     </main>
   );
 };
-
 export default AddStuff;
