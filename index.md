@@ -270,7 +270,8 @@ You can now add new Stuff documents, and list the Stuff you have created. Note y
 
 After logging in, here is the page that allows you to add new Stuff:
 
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/add-stuff-page.png)
+![](doc/add-stuff-page.png)
+
 
 #### List Stuff page
 
