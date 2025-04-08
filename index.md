@@ -242,7 +242,7 @@ By default, each user only sees the Stuff that they have created. However, the s
 
 When you retrieve the app at http://localhost:3000, this is what should be displayed:
 
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/landing-page.png)
+![](doc/landing.png)
 
 The next step is to use the Login menu to either Login to an existing account or register a new account.
 
@@ -262,7 +262,7 @@ Alternatively, clicking on the Login link, then on the Sign Up menu item display
 
 Once you log in (either to an existing account or by creating a new one), the navbar changes as follows:
 
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/landing-after-login-page.png)
+![](doc/landing-after-login-page.png)
 
 You can now add new Stuff documents, and list the Stuff you have created. Note you cannot see any Stuff created by other users.
 
@@ -297,7 +297,7 @@ You can define an "admin" user in the settings.json file. This user, after loggi
 
 To provide a simple example of a "super power" for Admin users, the Admin page lists all of the Stuff by all of the users:
 
-![](https://github.com/ics-software-engineering/nextjs-application-template/raw/main/doc/admin-list-stuff-page.png)
+![](doc/admin-list-stuff.png)
 
 Note that non-admin users cannot get to this page, even if they type in the URL by hand.
 
