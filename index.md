@@ -270,7 +270,7 @@ You can now add new Stuff documents, and list the Stuff you have created. Note y
 
 After logging in, here is the page that allows you to add new Stuff:
 
-![](doc/add-stuff-page.png)
+![](doc/add-stuff.png)
 
 
 #### List Stuff page
