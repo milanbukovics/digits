@@ -13,7 +13,12 @@ const AdminPage = async () => {
       user: { email: string; id: string; randomKey: string };
     } | null,
   );
-
+  const owner = session?.user!.email ? session.user.email : '';
+  const notes = await prisma.note.findMany({
+    where: {
+      owner, // Ensure we only fetch notes for the logged-in user
+    },
+  });
   const contacts : Contact[] = await prisma.contact.findMany({
 
   });
@@ -26,7 +31,7 @@ const AdminPage = async () => {
             <Row xs={1} md={2} lg={3} className="g-4">
               {contacts.map((contact) => (
                 <Col key={contact.firstName + contact.lastName}>
-                  <ContactCardAdmin contact={contact} />
+                  <ContactCardAdmin contact={contact} notes={notes.filter(note => (note.contactId === contact.id))} />
                 </Col>
               ))}
             </Row>
